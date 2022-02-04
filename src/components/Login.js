@@ -59,11 +59,11 @@ function Login(props) {
                     <div className="form-outline mb-4">
                           <input onChange={handleChange} type="password" text={loginForm.password}  name="password"   placeholder="Password"  value={loginForm.password} />
                     </div>
-                    <div class="pt-1 mb-4">
-                      <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={logMeIn}>Login</button>
+                    <div className="pt-3 mb-4">
+                      <button className="btn btn-primary btn-md btn-block" type="submit" onClick={logMeIn}>Login</button>
                     </div>
                     <p className="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                    <p>Don't have an account? <a href="#!" className="link-info">Register here</a></p>
+                    <p className="text-black-50">Don't have an account? <a href="#!" className="link-primary text-50">Register here</a></p>
                   </div>
 
                 </div>

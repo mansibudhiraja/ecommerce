@@ -63,7 +63,7 @@ function Register(props){
                                         <input type="text" placeholder="First Name" name="firstName" value={registerForm.firstName} onChange={handleChange}/>
                                     </div>
                                     <div className="form-outline mb-4">
-                                        <input type="text" placeholder="Last Name" name="firstName" value={registerForm.lastName} onChange={handleChange}/>           
+                                        <input type="text" placeholder="Last Name" name="lastName" value={registerForm.lastName} onChange={handleChange}/>           
                                     </div>
                                     <div className="form-outline mb-4">
                                         <input type="email" placeholder="email" name="email" value={registerForm.email} onChange={handleChange}/>             
@@ -71,7 +71,7 @@ function Register(props){
                                     <div className="form-outline mb-4">
                                         <input type="password" placeholder="password" name="password" value={registerForm.password} onChange={handleChange}/>
                                     </div>
-                                    <div class="pt-1 mb-4">
+                                    <div className="pt-1 mb-4">
                                     <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={registerMe}>Register</button>
                                     </div>
                             </form>

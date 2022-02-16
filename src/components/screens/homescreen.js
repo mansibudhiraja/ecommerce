@@ -1,13 +1,13 @@
 
-
-
-
-import { useEffect,useReducer,useState } from 'react';
+import { useEffect,useReducer, useState } from 'react';
 import axios from 'axios'
 import data from '../data'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Product from '../Product';
+import { Helmet } from 'react-helmet-async';
+import Choices from '../choices';
+import ImageCarousel from '../ImageCarousel';
 
 
 const reducer = (state, action) => {
@@ -36,7 +36,7 @@ function HomeScreen(){
             dispatch({type: 'FETCH_REQUEST'});
             try{
                 const result = await axios.get('/api/products')
-                dispatch({type: 'FETCH_SUCCESS', payload: result.data.products});
+                dispatch({type: 'FETCH_SUCCESS', payload: result.data});
             }
             catch(error){
                 dispatch({type: 'FETCH_FAIL', payload: error.message})
@@ -48,22 +48,26 @@ function HomeScreen(){
     }, []);
 
     return (
-        <div className="container">
-           <h4>Featured Products</h4>
+        <>
+        <Helmet>
+            <title>Big Basket</title>
+        </Helmet>
+        <Choices />
+        <ImageCarousel />
            <div className="products">
            <Row>
             {
                 products.map((product) => (
                 <Col key={product.slug} sm={6} md={4} lg={6} className="mb-3">
                 <Product product={product} />
-              
                 </Col>
 
             ))}
             </Row>
             </div>
-        </div>
+        </>
         )
     }
 
+    
     export default HomeScreen

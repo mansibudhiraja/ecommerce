@@ -34,3 +34,28 @@ main{
 .product img{
   width: 100%;
 }
+
+.rating span{
+  color: gold;
+}
+
+.btn{
+  background-color: gold;
+  color: black;
+}
+
+.img-large{
+  max-width: 100%;
+}
+
+.advertisement{
+  background-color: black;
+}
+
+.news-header{
+  background-color: black;
+  text-align: center;
+  padding: 10px 64px;
+  color: #cecece
+
+}

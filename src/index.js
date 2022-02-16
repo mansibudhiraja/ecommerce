@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {HelmetProvider} from 'react-helmet-async'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StoreProvider } from './components/store';
 
 ReactDOM.render(
   <React.StrictMode>
+  <StoreProvider>
+  <HelmetProvider>
     <App />
+  </HelmetProvider>
+  </StoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

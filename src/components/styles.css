@@ -5,8 +5,8 @@
 }
 
 .logo{
-    color: white;
-    font-size: larger;
+    max-width: 100%;
+    height: auto;
 }
 .advertisement{
     text-align: center;
@@ -25,6 +25,7 @@
 .top-nav-bar {
     border: none;
     padding-right: 22px;
+    color: black
 }
 
 .top-bar-item {
@@ -52,7 +53,6 @@
 }
 
 .navbar-list{
-    color: white;
     text-decoration: none;
 
 }
@@ -70,7 +70,7 @@
     }
 
     .top-bar-item {
-        color: #C0C0C0;
+        color: black;
         font-size: 20px;
         display: block;
         padding-left: 40px;

@@ -1,5 +1,5 @@
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import React from 'react'
 import Login from './components/Login'
@@ -12,9 +12,11 @@ import Navigation from './components/Navigation'
 import HomeScreen from './components/screens/homescreen'
 import ProductScreen from './components/screens/ProductScreen'
 import Footer from './components/footer'
+import CartScreen from './components/screens/cartScreen'
 
 
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 function App() {
 
@@ -28,11 +30,15 @@ function App() {
         <Navigation />
       </header>
       <main>
+      <Container className="mt-3">
         <Routes>
-          <Route path='/' element={<HomeScreen/>} />
-          <Route path="/product/:slug" element={<ProductScreen />} />
+        <Route path='/' element={<HomeScreen/>} />
+        <Route path="/product/:slug" element={<ProductScreen />} />
+        <Route path='/cart' element={<CartScreen/>} />
+     
+        
         </Routes>
-       
+      </Container>
       </main>
         <Routes>
           <Route path="/login" element={<Login/>} />
